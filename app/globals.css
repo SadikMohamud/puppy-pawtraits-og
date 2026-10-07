@@ -132,10 +132,6 @@ button {
   text-transform: uppercase;
 }
 
-.eyebrow__num {
-  color: var(--clay);
-}
-
 .section-head {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -357,12 +353,6 @@ button:hover > .roll::after {
   text-decoration: none;
 }
 
-.nav__index {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--clay);
-}
-
 .nav__actions {
   justify-self: end;
   display: flex;
@@ -487,12 +477,6 @@ button:hover > .roll::after {
 .menu[data-open='true'] .menu__link {
   transform: none;
   transition-delay: calc(250ms + var(--i) * 80ms);
-}
-
-.menu__index {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--clay);
 }
 
 .menu__foot {
@@ -767,13 +751,6 @@ button:hover > .roll::after {
   transition: background-color 400ms var(--ease-out), color 400ms var(--ease-out), border-color 400ms var(--ease-out);
 }
 
-.filter sup {
-  font-family: var(--font-mono);
-  font-size: 9px;
-  line-height: 1.8;
-  color: var(--clay);
-}
-
 .filter:hover {
   border-color: var(--ink);
 }
@@ -832,7 +809,7 @@ button:hover > .roll::after {
 
 .gallery__caption {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: baseline;
   gap: 14px;
   padding-top: 14px;
@@ -840,17 +817,12 @@ button:hover > .roll::after {
   padding-bottom: 12px;
 }
 
-.gallery__num,
 .gallery__breed {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--stone);
-}
-
-.gallery__num {
-  color: var(--clay);
 }
 
 .gallery__name {
@@ -1036,12 +1008,6 @@ button:hover > .roll::after {
   line-height: 1.05;
 }
 
-.print__num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--clay);
-}
-
 .print__price {
   margin: 0;
   font-family: var(--font-mono);
@@ -1147,14 +1113,8 @@ button:hover > .roll::after {
   border-top: 1px solid var(--ink);
 }
 
-.step__num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--clay);
-}
-
 .step__title {
-  margin: 18px 0 10px;
+  margin: 0 0 10px;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.6rem, 2.2vw, 2.2rem);

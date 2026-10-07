@@ -7,7 +7,7 @@ import { ScrollReveal } from './mechanics/ScrollReveal';
 import { SplitText } from './mechanics/SplitText';
 import { Plate } from './Plate';
 
-function PrintCard({ print, index }: { print: Print; index: number }) {
+function PrintCard({ print }: { print: Print }) {
   const { add } = useCart();
   const [sizeId, setSizeId] = useState(sizes[0].id);
   const size = sizes.find((s) => s.id === sizeId)!;
@@ -25,7 +25,6 @@ function PrintCard({ print, index }: { print: Print; index: number }) {
       <div className="print__body">
         <div className="print__row">
           <h3 className="print__title">
-            <span className="print__num">{String(index + 1).padStart(2, '0')}</span>
             {print.title}
           </h3>
           <p className="print__price" aria-live="polite">{formatPrice(size.price)}</p>
@@ -55,7 +54,7 @@ export function Shop() {
   return (
     <section className="shop" id="prints" aria-label="Print shop">
       <header className="section-head section-head--light">
-        <p className="eyebrow"><span className="eyebrow__num">02</span> Print shop</p>
+        <p className="eyebrow">Print shop</p>
         <SplitText as="h2" by="words" className="section-title" interval={60}>
           Hang them where they nap.
         </SplitText>
@@ -66,8 +65,8 @@ export function Shop() {
       </header>
 
       <ScrollReveal className="prints" stagger={120} distance={56} duration={950}>
-        {prints.map((print, i) => (
-          <PrintCard key={print.id} print={print} index={i} />
+        {prints.map((print) => (
+          <PrintCard key={print.id} print={print} />
         ))}
       </ScrollReveal>
 

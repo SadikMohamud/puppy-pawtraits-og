@@ -7,9 +7,9 @@ import { useCart } from './Cart';
 import { site } from '@/lib/site';
 
 const links = [
-  { href: '#work', label: 'Work', index: '01' },
-  { href: '#prints', label: 'Prints', index: '02' },
-  { href: '#commission', label: 'Commission', index: '03' },
+  { href: '#work', label: 'Work' },
+  { href: '#prints', label: 'Prints' },
+  { href: '#commission', label: 'Commission' },
 ];
 
 // Label that rolls up to a duplicate of itself on hover.
@@ -68,7 +68,6 @@ export function Nav() {
         <nav className="nav__links" aria-label="Primary">
           {links.map((link) => (
             <a key={link.href} href={link.href} className="nav__link">
-              <span className="nav__index">{link.index}</span>
               <Roll>{link.label}</Roll>
             </a>
           ))}
@@ -94,7 +93,6 @@ export function Nav() {
           {links.map((link, i) => (
             <li key={link.href} style={{ '--i': i } as CSSProperties}>
               <a href={link.href} className="menu__link" onClick={() => setMenu(false)}>
-                <span className="menu__index">{link.index}</span>
                 {link.label}
               </a>
             </li>

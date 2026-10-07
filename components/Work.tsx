@@ -36,7 +36,7 @@ export function Work() {
   return (
     <section className="work" id="work" aria-label="Selected work">
       <header className="section-head">
-        <p className="eyebrow"><span className="eyebrow__num">01</span> Selected work</p>
+        <p className="eyebrow">Selected work</p>
         <SplitText as="h2" by="words" className="section-title" interval={60}>
           Every dog sits differently.
         </SplitText>
@@ -50,7 +50,6 @@ export function Work() {
         {filters.map((f) => (
           <button key={f} className="filter" aria-pressed={filter === f} onClick={() => { setFilter(f); setActive(null); }}>
             {f}
-            <sup>{f === 'All' ? works.length : works.filter((w) => w.category === f).length}</sup>
           </button>
         ))}
       </div>
@@ -64,7 +63,6 @@ export function Work() {
               </span>
             </button>
             <figcaption className="gallery__caption">
-              <span className="gallery__num">{String(works.indexOf(work) + 1).padStart(2, '0')}</span>
               <span className="gallery__name">{work.name}</span>
               <span className="gallery__breed">{work.breed}</span>
             </figcaption>
@@ -85,7 +83,6 @@ export function Work() {
               </p>
               <div className="lightbox__nav">
                 <button onClick={() => setActive((i) => (i! - 1 + shown.length) % shown.length)} aria-label="Previous portrait">Prev</button>
-                <span>{String((active ?? 0) + 1).padStart(2, '0')} / {String(shown.length).padStart(2, '0')}</span>
                 <button onClick={() => setActive((i) => (i! + 1) % shown.length)} aria-label="Next portrait">Next</button>
                 <button onClick={() => setActive(null)} className="lightbox__close">Close</button>
               </div>

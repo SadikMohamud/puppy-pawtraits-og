@@ -15,16 +15,15 @@ export function Commission() {
   return (
     <footer className="commission" id="commission">
       <header className="section-head">
-        <p className="eyebrow"><span className="eyebrow__num">03</span> Commission a portrait</p>
+        <p className="eyebrow">Commission a portrait</p>
         <SplitText as="h2" by="words" className="section-title" interval={60}>
           Bring them in. Bring the treats.
         </SplitText>
       </header>
 
       <ScrollReveal className="steps" stagger={110}>
-        {steps.map((step, i) => (
+        {steps.map((step) => (
           <div key={step.title} className="step">
-            <span className="step__num">{String(i + 1).padStart(2, '0')}</span>
             <h3 className="step__title">{step.title}</h3>
             <p>{step.body}</p>
           </div>
